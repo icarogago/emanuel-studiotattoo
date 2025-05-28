@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color1: #fdd736;
+  --color2: #cfad28;
+  --color3: #a1831b;
+  --color4: #72580d;
+  --color5: #442e00;
+  --color6: #000000;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-color5;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-color1 to-color3 bg-clip-text text-transparent;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-color5;
+  }
+
+  .animate-fade-in {
+    @apply opacity-0 animate-[fadeIn_1s_ease-in_forwards];
+  }
+
+  .animate-float {
+    @apply animate-[float_3s_ease-in-out_infinite];
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+} 

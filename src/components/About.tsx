@@ -27,7 +27,7 @@ const About = () => {
             <h2 className="section-title">
               Sobre o <span className="gradient-text">Artista</span>
             </h2>
-            
+
             <p className="text-lg text-color5 mb-6 leading-relaxed">
               Com mais de 8 anos de experiência na arte da tatuagem, Emanuel R. Lopes 
               transformou sua paixão por arte em uma carreira dedicada a criar obras 

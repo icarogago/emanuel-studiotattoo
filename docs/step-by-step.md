@@ -57,11 +57,4 @@
 2. Revisar responsividade com novo esquema de cores
 3. Considerar adicionar mais animações e transições
 4. Avaliar acessibilidade com novo contraste de cores
-5. Testar o tema escuro em diferentes componentes
-
-### 5. Limpeza e Otimização
-1. Remoção de dependências e referências ao Lovable:
-   - Removida a dependência `lovable-tagger` do package.json
-   - Removida a importação e uso do lovable-tagger do vite.config.ts
-   - Removidas as meta tags relacionadas ao Lovable do index.html
-   - Atualizadas as meta tags para refletir o nome correto do projeto (Soul Trace Tattoo) 
+5. Testar o tema escuro em diferentes componentes 

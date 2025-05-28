@@ -1,70 +1,55 @@
 # Emanuel Lopes Studio Tattoo
 
-## Sobre o Projeto
-
-Este é o site oficial do Emanuel Lopes Studio Tattoo, um espaço dedicado à arte da tatuagem, oferecendo serviços de alta qualidade e designs personalizados. O site foi desenvolvido para proporcionar uma experiência moderna e intuitiva aos clientes, permitindo que eles conheçam o trabalho do estúdio, agendem consultas e explorem o portfólio de tatuagens.
+Este é o site oficial do Emanuel Lopes Studio Tattoo, apresentando o trabalho do artista, portfólio de tatuagens (imagens e vídeos) e informações de contato para orçamentos.
 
 ## Tecnologias Utilizadas
 
-- Vite
-- TypeScript
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- Vite
+- Lucide React (para ícones)
+- React CountUp (para animação de números)
+
+## Como Começar
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/icarogago/emanuel-studiotattoo.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd emanuel-studiotattoo
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+O site estará disponível em `http://localhost:5173` (ou outra porta indicada no terminal).
 
 ## Estrutura do Projeto
 
-```
-src/
-├── components/     # Componentes reutilizáveis
-├── pages/         # Páginas da aplicação
-├── styles/        # Estilos globais e configurações
-├── assets/        # Imagens e recursos estáticos
-└── utils/         # Funções utilitárias
-```
+- `public/`: Contém arquivos estáticos como imagens (`img/`) e vídeos (`img/videos/`).
+- `src/`: Código fonte da aplicação.
+  - `components/`: Componentes reutilizáveis da UI (Header, Footer, Portfolio, Contact, etc.).
+  - `pages/`: Páginas principais do site (Index, NotFound).
+  - `styles/`: Arquivos de estilo globais e de tema.
+  - `lib/`: Utilitários e configurações.
+  - `hooks/`: Hooks personalizados.
+- `docs/`: Documentação adicional, incluindo o arquivo `step-by-step.md` com o histórico de alterações.
 
-## Como Executar o Projeto
+## Personalização
 
-1. Clone o repositório:
-```sh
-git clone https://github.com/seu-usuario/emanuel-tattoo.git
-```
-
-2. Instale as dependências:
-```sh
-npm install
-```
-
-3. Inicie o servidor de desenvolvimento:
-```sh
-npm run dev
-```
-
-4. Acesse o projeto em `http://localhost:5173`
-
-ou veja o projeto publicado aqui: `https://soul-trace-portfolio.vercel.app/`
-
-## Funcionalidades Principais
-
-- Portfólio de tatuagens
-- Sistema de agendamento
-- Galeria de trabalhos
-- Informações sobre o estúdio
-- Contato e localização
-
-## Documentação
-
-A documentação detalhada do projeto está disponível na pasta `documentation/`, incluindo:
-
-- Guia de estilo
-- Padrões de código
-- Fluxo de trabalho
-- Arquitetura do sistema
+- **Cores:** Altere as variáveis de cor no `tailwind.config.js` e `src/styles/globals.css`.
+- **Conteúdo:** Edite os textos e informações nos componentes relevantes (About, Contact, etc.).
+- **Portfólio:** Adicione/remova imagens (`public/img/`) e vídeos (`public/img/videos/`) e atualize as listas `imageList` e `videoList` em `src/components/Portfolio.tsx`.
+- **Menu:** Ajuste os itens do menu no `src/components/Header.tsx`.
 
 ## Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## Contato
-
-Para mais informações sobre o estúdio, visite nosso site ou entre em contato através dos canais disponíveis na página de contato.
+[Adicionar informações da licença aqui, se aplicável.]

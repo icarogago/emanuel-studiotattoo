@@ -149,7 +149,7 @@ Mensagem: ${formData.message}`;
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   className="bg-white border-color1 text-color5 focus:border-color3 min-h-[120px]"
-                  placeholder="Descreva sua ideia, incluindo localização no corpo, referências, cores desejadas, etc."
+                  placeholder="Descreva sua ideia de tatuagem..."
                 />
               </div>
 
@@ -186,17 +186,6 @@ Mensagem: ${formData.message}`;
                     </div>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-color3/20">
-                <h4 className="text-lg font-semibold text-color5 mb-4">Dicas para seu Orçamento</h4>
-                <ul className="space-y-2 text-color5/90 text-sm">
-                  <li>• Descreva detalhadamente sua ideia</li>
-                  <li>• Informe o tamanho e localização desejados</li>
-                  <li>• Envie referências se possível</li>
-                  <li>• Mencione se é sua primeira tatuagem</li>
-                  <li>• Considere agendar uma consulta presencial</li>
-                </ul>
               </div>
             </div>
           </div>

@@ -49,7 +49,3 @@ O site estará disponível em `http://localhost:5173` (ou outra porta indicada n
 - **Conteúdo:** Edite os textos e informações nos componentes relevantes (About, Contact, etc.).
 - **Portfólio:** Adicione/remova imagens (`public/img/`) e vídeos (`public/img/videos/`) e atualize as listas `imageList` e `videoList` em `src/components/Portfolio.tsx`.
 - **Menu:** Ajuste os itens do menu no `src/components/Header.tsx`.
-
-## Licença
-
-[Adicionar informações da licença aqui, se aplicável.]

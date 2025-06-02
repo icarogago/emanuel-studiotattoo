@@ -19,6 +19,8 @@
   - São Mateus, ES
 - Removidas as 'Dicas para seu Orçamento' da seção de Contato, pois a descrição detalhada já é solicitada no campo de texto.
 - Restaurada a formatação original do campo 'Descrição da Tatuagem' na seção de Contato.
+- **Melhoria:** O campo "Local de Atendimento" agora envia o valor já formatado e acentuado corretamente na mensagem do WhatsApp.
+- **Melhoria:** O campo "Telefone" agora aceita apenas números e aplica automaticamente a máscara (XX) XXXXX-XXXX durante a digitação.
 
 ### 3. Atualizações e Estilização do Portfólio e Vídeos
 - O menu de navegação foi atualizado para incluir links separados para 'Galeria' (anteriormente Portfólio) e 'Vídeos'.

@@ -7,6 +7,20 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
+function formatPhone(value: string) {
+  // Remove tudo que não for número
+  value = value.replace(/\D/g, '');
+
+  // Aplica a máscara (XX) XXXXX-XXXX
+  if (value.length > 2) {
+    value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+  }
+  if (value.length > 7) {
+    value = value.replace(/(\d{5})(\d)/, '$1-$2');
+  }
+  return value.slice(0, 15); // Limita ao tamanho máximo
+}
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,13 +38,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Create WhatsApp message
-    const message = `Olá! Gostaria de solicitar um orçamento:
-    
-Nome: ${formData.name}
-Telefone: ${formData.phone}
-Tamanho: ${formData.size}
-Local de Atendimento: ${formData.localAtendimento}
-Mensagem: ${formData.message}`;
+    const message = `Olá! Gostaria de solicitar um orçamento:\n\nNome: ${formData.name}\nLocal de Atendimento: ${formData.localAtendimento}\nTamanho: ${formData.size}\nDescrição: ${formData.message}`;
     
     const whatsappUrl = `https://wa.me/5527997942852?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -105,7 +113,7 @@ Mensagem: ${formData.message}`;
                     type="tel"
                     required
                     value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    onChange={(e) => handleInputChange('phone', formatPhone(e.target.value))}
                     className="bg-white border-color1 text-color5 focus:border-color3"
                     placeholder="(XX) XXXXX-XXXX"
                   />
@@ -120,8 +128,8 @@ Mensagem: ${formData.message}`;
                       <SelectValue placeholder="Selecione o local" />
                     </SelectTrigger>
                     <SelectContent className="bg-white border-color1 text-color5">
-                      <SelectItem value="conceicaoDaBarra">Conceição da Barra, ES</SelectItem>
-                      <SelectItem value="saoMateus">São Mateus, ES</SelectItem>
+                      <SelectItem value="Conceição da Barra, ES">Conceição da Barra, ES</SelectItem>
+                      <SelectItem value="São Mateus, ES">São Mateus, ES</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -132,10 +140,10 @@ Mensagem: ${formData.message}`;
                       <SelectValue placeholder="Tamanho aproximado" />
                     </SelectTrigger>
                     <SelectContent className="bg-white border-color1 text-color5">
-                      <SelectItem value="pequena">Pequena (até 5cm)</SelectItem>
-                      <SelectItem value="media">Média (5-15cm)</SelectItem>
-                      <SelectItem value="grande">Grande (15-30cm)</SelectItem>
-                      <SelectItem value="muito-grande">Muito Grande (+30cm)</SelectItem>
+                      <SelectItem value="Pequena (até 5cm)">Pequena (até 5cm)</SelectItem>
+                      <SelectItem value="Média (5-15cm)">Média (5-15cm)</SelectItem>
+                      <SelectItem value="Grande (15-30cm)">Grande (15-30cm)</SelectItem>
+                      <SelectItem value="Muito Grande (+30cm)">Muito Grande (+30cm)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ImageViewer from './ImageViewer';
+import { Button } from './ui/button';
 
 const imageList = [
   'Arte- (1).jpeg',
@@ -78,6 +79,13 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+      <Button
+        asChild
+        className="floating-button w-12 h-12 bg-green-500 hover:bg-green-600 text-white shadow-lg rounded-lg flex items-center justify-center"
+      >
+        {/* ... */}
+      </Button>
     </>
   );
 };

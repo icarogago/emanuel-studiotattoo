@@ -2,21 +2,27 @@ import React, { useState } from 'react';
 import ImageViewer from './ImageViewer';
 
 const imageList = [
-  'Arte - 003.jpeg',
-  'Arte -.jpeg',
-  'Arte - Temos nosso proprio tempo.jpeg',
-  'Arte - Pomo de ouro.jpeg',
-  'Arte - Deadpool.jpeg',
-  'Arte - 003.jpeg',
+  'Arte- (1).jpeg',
+  'Arte- (2).jpeg',
+  'Arte- (3).jpeg',
+  'Arte- (4).jpeg',
+  'Arte- (5).jpeg',
+  'Arte- (6).jpeg',
+  'Arte- (7).jpeg',
+  'Arte- (8).jpeg',
+  'Arte- (9).jpeg',
 ];
 
 const videoList = [
-  'Arte - Kurama.mp4',
-  'Arte - Deus da guerra.mp4',
-  'Arte Japonesa.mp4',
-  'Arte Kimetsu - Anime.mp4',
-  'Fechamento no tema Uchiha..mp4',
-  'Arte - Kurama.mp4',
+  'video- (1).mp4',
+  'video- (2).mp4',
+  'video- (3).mp4',
+  'video- (4).mp4',
+  'video- (5).mp4',
+  'video- (6).mp4',
+  'video- (7).mp4',
+  'video- (8).mp4',
+  'video- (9).mp4',
 ];
 
 const Portfolio = () => {
